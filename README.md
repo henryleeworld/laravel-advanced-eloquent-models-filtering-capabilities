@@ -1,4 +1,4 @@
-# Laravel 8 進階 Eloquent 模型過濾能力
+# Laravel 10 進階 Eloquent 模型過濾能力
 
 引入 pricecurrent 的 laravel-eloquent-filters 套件來擴增進階 Eloquent 模型過濾能力，尤其當需要處理複雜的使用情境、使用複雜的邏輯對許多參數實施過濾時。
 
@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/Kt7jDP8.png)
+![](https://i.imgur.com/C7Zgmge.png)
 > 過濾姓名特定字詞的集合取得
