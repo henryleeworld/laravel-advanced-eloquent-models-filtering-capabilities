@@ -7,11 +7,8 @@ use Pricecurrent\LaravelEloquentFilters\AbstractEloquentFilter;
 
 class NameFilter extends AbstractEloquentFilter
 {
-    protected $name;
-
-    public function __construct($name)
+    public function __construct(protected $name)
     {
-        $this->name = $name;
     }
 
     public function apply(Builder $query): Builder

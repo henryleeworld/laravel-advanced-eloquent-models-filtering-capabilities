@@ -9,10 +9,12 @@ use Pricecurrent\LaravelEloquentFilters\EloquentFilters;
 
 class UsersController extends Controller
 {
+    /**
+     * Display the resource.
+     */
     public function show() 
     {
         $keyword = Str::substr(User::inRandomOrder()->first()->name, 0, 5);
-        $user = User::filter(EloquentFilters::make([new NameFilter($keyword)]))->first();
-        echo '開頭為 ' . $keyword . ' 的第一筆使用者姓名為：' . $user->name . PHP_EOL;
+        echo __('The first user name starting with :keyword is: ', ['keyword' => $keyword]) . User::filter(EloquentFilters::make([new NameFilter($keyword)]))->first()->name . PHP_EOL;
     }
 }
